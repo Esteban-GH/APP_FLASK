@@ -1,0 +1,32 @@
+@base = http://localhost:5000
+
+# Crear un recordatorio
+POST {{base}}/api/reminders HTTP/1.1
+Content-Type: application/json
+
+{
+    "content": "Evaluacion de Programacion"
+    
+}
+
+###
+
+# Listar todos los recordatorios
+GET {{base}}/api/reminders HTTP/1.1
+Accept: application/json
+
+###
+
+# Actualizar un recordatorio
+PATCH {{base}}/api/reminders/63117358-c583-43ec-8473-37a9a65f8577 HTTP/1.1
+Content-Type: application/json
+
+{
+    "content": "Evaluacion de Base datos",
+    "important": true
+}
+
+###
+
+# Eliminar un recordatorio
+DELETE {{base}}/api/reminders/1eed340a-5e83-44aa-929c-7c4bb59cdb39 HTTP/1.1
